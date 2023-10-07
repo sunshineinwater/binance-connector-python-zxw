@@ -52,7 +52,10 @@ class BinanceSocketManager(threading.Thread):
         self._callback(self.on_open)
 
     def run(self):
-        self.read_data()
+        try:
+          self.read_data()
+        except Exception as e:
+          raise e
 
     def send_message(self, message):
         self.logger.debug("Sending message to Binance WebSocket Server: %s", message)
