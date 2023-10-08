@@ -8,10 +8,10 @@ with open(
 
 NAME = "binance-connector-zxw"
 DESCRIPTION = (
-    "This is a lightweight library that works as a connector to Binance public API."
+    "修复了原版的binance-connector-python的websocket连接丢失无法捕获错误的BUG，使其可以正常运行"
 )
-AUTHOR = "Binance"
-URL = "https://github.com/binance/binance-connector-python"
+AUTHOR = "shuiheyangguang@me.com"
+URL = "https://github.com/sunshineinwater/binance-connector-python-zxw"
 VERSION = None
 
 about = {}

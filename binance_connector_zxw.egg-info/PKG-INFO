@@ -1,3 +1,21 @@
+Metadata-Version: 2.1
+Name: binance-connector-zxw
+Version: 3.4.0
+Summary: 修复了原版的binance-connector-python的websocket连接丢失无法捕获错误的BUG，使其可以正常运行
+Home-page: https://github.com/sunshineinwater/binance-connector-python-zxw
+License: MIT
+Keywords: Binance,Public API
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
 # 修复了原版websocket连接丢失错误无法捕获的BUG,其他没变
 # Binance Public API Connector Python
 [![PyPI version](https://img.shields.io/pypi/v/binance-connector)](https://pypi.python.org/pypi/binance-connector)
