@@ -1,5 +1,5 @@
 from typing import Optional
-
+import time
 import logging
 import threading
 from websocket import (
@@ -13,16 +13,16 @@ from binance.lib.utils import parse_proxies
 
 class BinanceSocketManager(threading.Thread):
     def __init__(
-        self,
-        stream_url,
-        on_message=None,
-        on_open=None,
-        on_close=None,
-        on_error=None,
-        on_ping=None,
-        on_pong=None,
-        logger=None,
-        proxies: Optional[dict] = None,
+            self,
+            stream_url,
+            on_message=None,
+            on_open=None,
+            on_close=None,
+            on_error=None,
+            on_ping=None,
+            on_pong=None,
+            logger=None,
+            proxies: Optional[dict] = None,
     ):
         threading.Thread.__init__(self)
         if not logger:
@@ -52,10 +52,7 @@ class BinanceSocketManager(threading.Thread):
         self._callback(self.on_open)
 
     def run(self):
-        try:
-          self.read_data()
-        except Exception as e:
-          raise e
+        self.read_data()
 
     def send_message(self, message):
         self.logger.debug("Sending message to Binance WebSocket Server: %s", message)
@@ -72,7 +69,7 @@ class BinanceSocketManager(threading.Thread):
             except WebSocketException as e:
                 if isinstance(e, WebSocketConnectionClosedException):
                     self.logger.error("Lost websocket connection")
-                     # bug fix: 重连
+                    # bug fix: 重连 - zxw
                     time.sleep(1)
                     continue
                 else:

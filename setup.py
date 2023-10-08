@@ -6,7 +6,7 @@ with open(
 ) as fh:
     requirements = fh.readlines()
 
-NAME = "binance-connector"
+NAME = "binance-connector-zxw"
 DESCRIPTION = (
     "This is a lightweight library that works as a connector to Binance public API."
 )
